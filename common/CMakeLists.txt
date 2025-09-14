@@ -1126,6 +1126,9 @@ add_custom_target(generate_version ${CMAKE_COMMAND}
   -D SRC="${COMMON_SOURCE_DIR}/Version.h.in"
   -D DST="${CMAKE_CURRENT_BINARY_DIR}/Version.h"
   -D GIT_EXECUTABLE="${GIT_EXECUTABLE}"
+  -D BUILD_VERSION_YEAR="${BUILD_VERSION_YEAR}"
+  -D BUILD_VERSION_NUMBER="${BUILD_VERSION_NUMBER}"
+  -D BUILD_PLATFORM_NAME="${BUILD_PLATFORM_NAME}"
   -P "${CMAKE_CURRENT_SOURCE_DIR}/cmake/GenerateVersion.cmake")
 add_dependencies(common generate_version)
 
