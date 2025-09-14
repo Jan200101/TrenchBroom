@@ -256,14 +256,7 @@ void TrenchBroomApp::askForAutoUpdates()
   {
     auto& prefs = PreferenceManager::instance();
 
-    const auto enableAutoCheck =
-      QMessageBox::question(
-        nullptr,
-        "TrenchBroom",
-        tr(
-          R"(TrenchBroom can check for updates automatically. Would you like to enable this now?)"),
-        QMessageBox::Yes | QMessageBox::No)
-      == QMessageBox::Yes;
+    const auto enableAutoCheck = false;
 
     prefs.set(Preferences::AutoCheckForUpdates, enableAutoCheck);
     prefs.set(Preferences::AskForAutoUpdates, false);
