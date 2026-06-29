@@ -495,6 +495,9 @@ add_custom_target(TbUiLib_GenerateVersion ${CMAKE_COMMAND}
   -D SRC="${CMAKE_CURRENT_SOURCE_DIR}/include/ui/Version.h.in"
   -D DST="${CMAKE_CURRENT_BINARY_DIR}/generated/ui/Version.h"
   -D GIT_EXECUTABLE="${GIT_EXECUTABLE}"
+  -D BUILD_VERSION_YEAR="${BUILD_VERSION_YEAR}"
+  -D BUILD_VERSION_NUMBER="${BUILD_VERSION_NUMBER}"
+  -D BUILD_PLATFORM_NAME="${BUILD_PLATFORM_NAME}"
   -P "${CMAKE_CURRENT_SOURCE_DIR}/cmake/GenerateVersion.cmake")
 add_dependencies(TbUiLib TbUiLib_GenerateVersion)
 
